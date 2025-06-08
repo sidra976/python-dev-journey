@@ -27,23 +27,23 @@ else:
 
 print(price)  # Output the final ticket price
 
-marks = 123
+marks = 89
 #for exiting the program we use exit()
-if marks >= 100 or marks < 0:
+if marks >= 101 or marks < 0:
     print('Please enter marks between 0 - 100')
-    exit()
-
-if marks >= 90:
-    grade = 'A'
-elif marks >= 80:
-    grade = 'B'
-elif marks >= 70:
-    grade = 'C'
-elif marks >= 60:
-    grade = 'D'
-else:
-    grade = 'F'    
-print(grade)        
+    # exit() we wont use it for now
+else :
+    if marks >= 90:
+        grade = 'A'
+    elif marks >= 80:
+        grade = 'B'
+    elif marks >= 70:
+        grade = 'C'
+    elif marks >= 60:
+        grade = 'D'
+    else:
+        grade = 'F'    
+    print('Grade:',grade)        
 
 fruit = 'Banana'
 color = 'Yellow'
@@ -55,6 +55,17 @@ if fruit == 'Banana':
         print('ripe')
     elif color == 'Brown':
         print('OverRipe')      
+else:
+    print('No fruit detected')  
+
+order_size = 'Medium'
+extra_shot = True
+
+if extra_shot:
+    coffee = order_size + " Coffee with extra shot" 
+else :
+    coffee = order_size + " Coffee"     
+print(coffee)           
 
 
 
