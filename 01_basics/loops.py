@@ -11,10 +11,25 @@ for x in numbers:
 
 print(count_positive_int)        
 
-num = [1,2,3,4,5,6,7,8,9,10]
+n = 10
 sumOfEvenNo = 0
 
-for x in num:
-    if x > 0 and x % 2 == 0:
-        sumOfEvenNo+=x
+for x in range(1, n+1):
+    if x % 2 == 0:
+        sumOfEvenNo+=1
 print(sumOfEvenNo)    
+
+table = 5
+for i in range(1,11):
+    if i == 5:
+        continue
+    print(table, '*' , i , '=' , table * i)
+
+str = 'Python'
+reverse_str = ''
+
+for i in str:
+    reverse_str = i + reverse_str
+print(reverse_str)    
+   
+      
