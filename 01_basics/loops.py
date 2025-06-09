@@ -31,5 +31,22 @@ reverse_str = ''
 for i in str:
     reverse_str = i + reverse_str
 print(reverse_str)    
+
+
+user_string = 'javascript'
+
+for char in user_string:
+    if user_string.count(char) == 1:
+       print(char)
+       break
+
+num = 5
+result = 1
+i = num
+while i > 0:
+    result *= i
+    i -= 1
+print("Factorial of", num, "is", result)
+       
    
       
