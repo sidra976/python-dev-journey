@@ -1,0 +1,1 @@
+print(carObj1.model_for_read_only())
