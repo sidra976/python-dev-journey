@@ -1,6 +1,6 @@
 import os
 try:
-  with open('programmingy.txt' , 'r') as file:
+  with open('programming.txt' , 'r') as file:
     print('File exists! Contents: ')
     print(file.read())
 except:
