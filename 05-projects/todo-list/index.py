@@ -1,3 +1,17 @@
+import json
+import os
+FILE_NAME = "tasks.json"
+
+def load_tasks():
+    if os.path.exists(FILE_NAME):
+        with open(FILE_NAME, "r") as file:
+            return json.load(file)  
+    return []  
+
+def save_tasks(tasks):
+    with open(FILE_NAME, 'w') as file:
+        json.dump(tasks, file)
+
 def view_all_tasks(tasks):
     if not tasks:
         print("No tasks available.")
@@ -8,6 +22,7 @@ def view_all_tasks(tasks):
 def add_task(tasks):
     name = input('Add Task Name: ')
     tasks.append(name)
+    save_tasks(tasks)
     print(f'Task "{name}" added.')
 
 def delete_task(tasks):
@@ -16,13 +31,14 @@ def delete_task(tasks):
         index = int(input("Enter the task number to be deleted: "))
         if 1 <= index <= len(tasks):
             removed = tasks.pop(index - 1)
+            save_tasks(tasks)
             print(f'Task "{removed}" deleted.')
         else:
             print("Invalid task number selected")
     except ValueError:
         print("Please enter a valid number.")
 
-tasks = []
+tasks = load_tasks()
 while True:
     print('\nTo-do List | Choose option')
     print('1. View Tasks')
