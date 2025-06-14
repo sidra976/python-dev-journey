@@ -1,29 +1,40 @@
 import json
 import os
+
 FILE_NAME = 'notes.json'
+
 def load_notes():
     if os.path.exists(FILE_NAME):
-        with open('notes.json' , 'w') as file:
-            return json.load()
+        with open(FILE_NAME, 'r') as file:
+            return json.load(file)
+    else:
         return []
-    
-def add_notes():
+
+def save_notes(notes):
+    with open(FILE_NAME, 'w') as file:
+        json.dump(notes, file, indent=4)
+
+def add_notes(notes):
     note = input('Enter note: ')
     date = input('Enter date: ')
-    notes.append({'notes' : note , 'date' : date})
-    print(notes)
+    notes.append({'note': note, 'date': date})
+    save_notes(notes)  # save after adding
+    print("Note added!")
+
 def view_all_notes(notes):
-    pass
-def delete_notes(notes):
-    pass
-notes = load_notes()   
+    if not notes:
+        print("No notes yet.")
+    for i, user_notes in enumerate(notes, start=1):
+        print(f"{i}. {user_notes['note']}, date: {user_notes['date']}")
+
+# MAIN LOOP
+notes = load_notes()
 
 while True:
     print('\nTo-do List | Choose option')
-    print('1. View Tasks')
-    print('2. Add Task')
-    print('3. Delete Task')
-    print('4. Exit')
+    print('1. View Notes')
+    print('2. Add Note')
+    print('3. Exit')
     choice = input('Enter your choice: ')
 
     match choice:
@@ -32,10 +43,7 @@ while True:
         case '2':
             add_notes(notes)
         case '3':
-            delete_notes(notes)
-        case '4':
-            print("Exiting To-Do List. Goodbye!")
+            print("Exiting Notes App. Goodbye!")
             break
         case _:
             print('Invalid choice')
-
