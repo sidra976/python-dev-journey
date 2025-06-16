@@ -10,4 +10,3 @@ dict2 = {'apple': 5 , 'peach' : 10, 'Melon' : 2 }
 total = sum(dict2.values())
 print(total) 
 
-# 

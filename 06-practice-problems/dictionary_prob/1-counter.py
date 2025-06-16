@@ -1,3 +1,10 @@
+# from collections import Counter
+
+# animals = ['cat', 'dog', 'cat']
+# frequency = Counter(animals)
+
+# print(frequency)
+
 #problem 1
 animals = ['cat', 'dog', 'cat']
 frequency = {}
