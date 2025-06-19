@@ -1,0 +1,23 @@
+[
+    {
+        "title": "The Vampire Diaries",
+        "year": "2009\u20132017",
+        "director": "N/A",
+        "plot": "The lives, loves, dangers and disasters in the town, Mystic Falls, Virginia. Creatures of unspeakable horror lurk beneath this town as a teenage girl is suddenly torn between two vampire brothers.",
+        "imdb_Rating": "7.7"
+    },
+    {
+        "title": "Inception",
+        "year": "2010",
+        "director": "Christopher Nolan",
+        "plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+        "imdb_Rating": "8.8"
+    },
+    {
+        "title": "Lucifer",
+        "year": "2016\u20132021",
+        "director": "N/A",
+        "plot": "Lucifer Morningstar has decided he's had enough of being the dutiful servant in Hell and decides to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City of Angels.",
+        "imdb_Rating": "8.0"
+    }
+]
