@@ -1,0 +1,22 @@
+# Ignore virtual environments
+.venv/
+virtual_py/
+
+# Ignore environment variable file
+.env
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+
+# VSCode and IDE folders
+.vscode/
+.idea/
+
+# Ignore test coverage files
+htmlcov/
+.coverage
+
+# Ignore OS system files
+.DS_Store
+Thumbs.db
