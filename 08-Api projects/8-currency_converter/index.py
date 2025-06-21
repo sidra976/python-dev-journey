@@ -12,7 +12,6 @@ def get_result():
     amount = 10
 
     URL = f'https://api.exchangerate.host/convert?from={convert_from}&to={convert_to}&amount={amount}&access_key={API_KEY}'
-    # URL = f'https://api.exchangerate.host/convert?from=USD&to=PKR&amount=10&access_key={API_KEY}'
     response = requests.get(URL)
     data = response.json()
 
